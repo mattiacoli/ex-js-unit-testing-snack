@@ -15,6 +15,11 @@ function average(arr) {
   return media
 }
 
+function isPalindrome(string) {
+  return string.toLowerCase() === string.toLowerCase().split('').reverse().join('')
+}
 
 
-module.exports = { getInitial, createSlug, average }
+
+
+module.exports = { getInitial, createSlug, average, isPalindrome }
