@@ -10,6 +10,11 @@ function createSlug(string) {
   return slug
 }
 
+function average(arr) {
+  const media = arr.reduce((acc, num) => acc + num, 0) / arr.length
+  return media
+}
 
 
-module.exports = { getInitial, createSlug }
+
+module.exports = { getInitial, createSlug, average }
