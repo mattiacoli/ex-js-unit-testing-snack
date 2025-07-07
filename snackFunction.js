@@ -27,7 +27,18 @@ function findPostById(arr, id) {
   return post
 }
 
+function addPost(posts, newPost) {
+  if (posts.some(post => post.id === newPost.id)) {
+    throw new Error('Id già esistente')
+  } else if (posts.some(post => post.slug === newPost.slug)) {
+    throw new Error('Slug già esistente')
+  }
+  return posts.push(newPost)
+}
+
+function removePost(posts, post) {
+  posts.splice(posts.indexOf(post), 1)
+}
 
 
-
-module.exports = { getInitial, createSlug, average, isPalindrome, findPostById }
+module.exports = { getInitial, createSlug, average, isPalindrome, findPostById, addPost, removePost }
