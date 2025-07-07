@@ -5,5 +5,11 @@ function getInitial(fullname) {
   return iniziali
 }
 
+function createSlug(string) {
+  const slug = string.toLowerCase().replaceAll(' ', '-')
+  return slug
+}
 
-module.exports = { getInitial }
+
+
+module.exports = { getInitial, createSlug }
