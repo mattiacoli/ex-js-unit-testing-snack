@@ -6,6 +6,9 @@ function getInitial(fullname) {
 }
 
 function createSlug(string) {
+  if (!string) {
+    throw new Error("Errore! la stringa non puo`essere vuota")
+  }
   const slug = string.toLowerCase().replaceAll(' ', '-')
   return slug
 }
