@@ -22,7 +22,12 @@ function isPalindrome(string) {
   return string.toLowerCase() === string.toLowerCase().split('').reverse().join('')
 }
 
+function findPostById(arr, id) {
+  const post = arr.find(p => p.id === id)
+  return post
+}
 
 
 
-module.exports = { getInitial, createSlug, average, isPalindrome }
+
+module.exports = { getInitial, createSlug, average, isPalindrome, findPostById }
